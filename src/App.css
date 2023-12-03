@@ -1,0 +1,128 @@
+:root {
+  --primary: #89B9AD;
+  --secondary: #C7DCA7;
+  --tertiary: #FFC5C5;
+  --text: #FFEBD8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 30px;
+  /* overflow: hidden; */
+}
+
+.background {
+  height: 100dvh;
+  width: 100dvw;
+  background-image: url(./bg.avif);
+  background-size: cover;
+  filter: blur(.5rem);
+  position: relative;
+}
+
+.generator {
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  /* background: rgba(0, 0, 0, 0.467); */
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--text);
+  margin: 4rem 0;
+}
+
+h2 {
+  font-size: 5rem;
+  background: #0000008a;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  margin: 30vh 40vw 10vh 40vw;
+  padding: 1rem;
+  border: .4rem solid var(--primary);
+  border-radius: 5rem;
+}
+
+.startBtnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-size: 4rem;
+  padding: .7rem 2rem;
+  /* background: var(--secondary); */
+  background: none;
+  color: var(--text);
+  border: none;
+  border-radius: 1rem;
+  transition: all .1s linear;
+}
+button:hover {
+  background: var(--primary);
+  cursor: pointer;
+}
+button:active {
+  opacity: .7;
+}
+
+.bottomBar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  height: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.bottomBar svg {
+  transition: transform .5s ease-in-out;
+  padding: .7rem;
+  border-radius: 4rem;
+}
+.bottomBar svg:hover {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.bottomBar svg:active {
+  opacity: .7;
+}
+
+.options {
+  height: 100dvh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  gap: .5rem;
+  align-items: end;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.options .inputCont {
+  display: flex;
+  gap: 1rem;
+}
+
+.options .inputCont label {
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.options .inputCont input {
+  color: var(--text);
+  background: none;
+  border: .15rem solid var(--text);
+  border-radius: .6rem;
+  padding-left: .4rem;
+  width: 10rem;
+}
